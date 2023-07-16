@@ -38,7 +38,7 @@ startBtn.addEventListener("click", function (e) {
             let nextDiv = document.querySelector(selector);        
             nextDiv.textContent = "K";
             nextDiv.style.color = "grey";
-        }, 2000 * i);
+        }, 400 + 2000 * (i - 1));
     }
 });
 // nextBtn.addEventListener("click", function (e) {
