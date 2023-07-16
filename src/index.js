@@ -23,19 +23,33 @@ let nextBtn = document.querySelector(".next");
 
 let last;
 startBtn.addEventListener("click", function (e) {
-    alert("Getting shortest path...");
     last = knightMoves(start, end);
-});
-
-nextBtn.addEventListener("click", function (e) {
-    if (last !== null) {
-        let selector = `div[class = "${last.getValue()[0] + 1}${last.getValue()[1] + 1}"]`;
-        document.querySelector(selector).textContent = "";
+    let sequence = [];
+    while (last !== null) {
+        sequence.push(last.getValue());
         last = last.getParent();
-        selector = `div[class = "${last.getValue()[0] + 1}${last.getValue()[1] + 1}"]`;
-        let nextDiv = document.querySelector(selector);
-        nextDiv.textContent = "K";
-        nextDiv.style.color = "grey";
     }
-    
+
+    for (let i = 1; i < sequence.length; i++) {
+        setTimeout(function() {
+            let selector = `div[class = "${sequence[i - 1][0] + 1}${sequence[i - 1][1] + 1}"]`;
+            document.querySelector(selector).textContent = "";
+            selector = `div[class = "${sequence[i][0] + 1}${sequence[i][1] + 1}"]`;
+            let nextDiv = document.querySelector(selector);        
+            nextDiv.textContent = "K";
+            nextDiv.style.color = "grey";
+        }, 2000 * i);
+    }
 });
+// nextBtn.addEventListener("click", function (e) {
+//     if (last !== null) {
+//         let selector = `div[class = "${last.getValue()[0] + 1}${last.getValue()[1] + 1}"]`;
+//         document.querySelector(selector).textContent = "";
+//         last = last.getParent();
+//         selector = `div[class = "${last.getValue()[0] + 1}${last.getValue()[1] + 1}"]`;
+//         let nextDiv = document.querySelector(selector);
+//         nextDiv.textContent = "K";
+//         nextDiv.style.color = "grey";
+//     }
+    
+// });

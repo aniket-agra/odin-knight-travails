@@ -35,11 +35,11 @@ function populateDisplay() {
     startBtn.style.margin = "2rem 0rem 0 19rem";
     bodyElem.appendChild(startBtn);
 
-    let nextBtn = document.createElement("button");
-    nextBtn.classList.add("next");
-    nextBtn.textContent = "Next";
-    nextBtn.style.margin = "2rem 1rem";
-    bodyElem.appendChild(nextBtn);
+    // let nextBtn = document.createElement("button");
+    // nextBtn.classList.add("next");
+    // nextBtn.textContent = "Next";
+    // nextBtn.style.margin = "2rem 1rem";
+    // bodyElem.appendChild(nextBtn);
 }
 
 export {populateDisplay};
