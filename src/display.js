@@ -35,6 +35,18 @@ function populateDisplay() {
     startBtn.style.margin = "2rem 0rem 0 19rem";
     bodyElem.appendChild(startBtn);
 
+    let instructions = document.createElement("ol");
+    for (let i = 0; i < 3; i++) {
+        let item = document.createElement("li");
+        switch (i) {
+            case 0 : item.textContent = "To start, click on a square for initial position."; break;
+            case 1 : item.textContent = "Next, click on another square for final position."; break;
+            case 2 : item.textContent = "Finally, click start button to start the animation and sit back."; break;
+        } 
+        instructions.appendChild(item);
+    }
+    bodyElem.appendChild(instructions);
+
     // let nextBtn = document.createElement("button");
     // nextBtn.classList.add("next");
     // nextBtn.textContent = "Next";
