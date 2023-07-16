@@ -28,6 +28,12 @@ function populateDisplay() {
     }
     
     bodyElem.appendChild(chessBoard);
+
+    let startBtn = document.createElement("button");
+    startBtn.classList.add("start");
+    startBtn.textContent = "Start travail";
+    startBtn.style.margin = "2rem 19rem";
+    bodyElem.appendChild(startBtn);
 }
 
 export {populateDisplay};
