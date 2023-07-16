@@ -4,30 +4,30 @@ function createNode(parentNode = null, val = null, child = []) {
     let children = child;
     
     const addChild = function (graphNode) {
-        this.children.push(graphNode);
+        children.push(graphNode);
     }
 
     const getChildren = function () {
-        return this.children;
+        return children;
     }
 
     const setParent = function (graphNode) {
-        this.parent = graphNode;
+        parent = graphNode;
     }
 
     const getParent = function () {
-        return this.parent;
+        return parent;
     }
 
     const setValue = function (coords) {
-        this.value = coords;
+        value = coords;
     }
 
     const getValue = function () {
-        return this.value;
+        return value;
     }
 
-    return {getValue, setValue, getParent, setParent, getChildren, addChild};
+    return {getValue, setValue, getParent, setParent, getChildren, addChild}
 }
 
 export {createNode};
