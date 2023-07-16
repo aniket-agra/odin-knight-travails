@@ -1,6 +1,6 @@
 import { createNode } from "../graphNode";
 
-function knightMovesTest(start, end) {
+function getPath(start, end) {
     let vertDiff = [-2, 2, -1, 1];
     let horzDiff = [-2, 2, -1, 1];
     let visited = new Array(8);
@@ -43,7 +43,7 @@ function knightMovesTest(start, end) {
 }
 
 function knightMoves(start, end) {
-    let current = knightMovesTest(start, end);
+    let current = getPath(start, end);
     while (current !== null) {
         console.log(current.getValue());
         current = current.getParent();
