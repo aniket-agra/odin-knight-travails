@@ -9,11 +9,11 @@ document.querySelectorAll(".chessboard > div").forEach(e => e.addEventListener("
     let clicked = e.target.classList[0];
     let i = clicked[0] - 1, j = clicked[1] - 1;
     if (start === undefined) {
-        start = [i - 1, j - 1];
+        start = [i, j];
         e.target.style.color = "grey";
         e.target.textContent = "K";
     } else {
-        end = [i - 1, j - 1];
+        end = [i, j];
         e.target.style.color = "grey";
         e.target.textContent = "X";
     }

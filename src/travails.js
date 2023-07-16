@@ -43,11 +43,7 @@ function getPath(start, end) {
 }
 
 function knightMoves(start, end) {
-    let current = getPath(start, end);
-    while (current !== null) {
-        console.log(current.getValue());
-        current = current.getParent();
-    }
+    return getPath(start, end);
 }
 
 export {knightMoves};
