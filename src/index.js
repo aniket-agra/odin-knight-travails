@@ -17,3 +17,25 @@ document.querySelectorAll(".chessboard > div").forEach(e => e.addEventListener("
         e.target.textContent = "X";
     }
 }));
+
+let startBtn = document.querySelector(".start");
+let nextBtn = document.querySelector(".next");
+
+let last;
+startBtn.addEventListener("click", function (e) {
+    alert("Getting shortest path...");
+    last = knightMoves(start, end);
+});
+
+nextBtn.addEventListener("click", function (e) {
+    if (last !== null) {
+        let selector = `div[class = "${last.getValue()[0] + 1}${last.getValue()[1] + 1}"]`;
+        document.querySelector(selector).textContent = "";
+        last = last.getParent();
+        selector = `div[class = "${last.getValue()[0] + 1}${last.getValue()[1] + 1}"]`;
+        let nextDiv = document.querySelector(selector);
+        nextDiv.textContent = "K";
+        nextDiv.style.color = "grey";
+    }
+    
+});
