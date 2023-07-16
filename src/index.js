@@ -4,3 +4,11 @@ import { knightMoves } from "./travails";
 
 knightMoves([0, 0], [1, 4]);
 populateDisplay();
+let start = undefined, end = undefined;
+document.querySelectorAll(".chessboard > div").forEach(e => e.addEventListener("click", function (e) {
+    if (start === undefined) {
+        start = [i - 1, j - 1];
+    } else {
+        end = [i - 1, j - 1];
+    }
+}));
