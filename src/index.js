@@ -10,7 +10,11 @@ document.querySelectorAll(".chessboard > div").forEach(e => e.addEventListener("
     let i = clicked[0] - 1, j = clicked[1] - 1;
     if (start === undefined) {
         start = [i - 1, j - 1];
+        e.target.style.color = "grey";
+        e.target.textContent = "K";
     } else {
         end = [i - 1, j - 1];
+        e.target.style.color = "grey";
+        e.target.textContent = "X";
     }
 }));
