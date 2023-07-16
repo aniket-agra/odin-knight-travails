@@ -36,7 +36,7 @@ function populateDisplay() {
     bodyElem.appendChild(startBtn);
 
     let nextBtn = document.createElement("button");
-    nextBtn.classList.add("start");
+    nextBtn.classList.add("next");
     nextBtn.textContent = "Next";
     nextBtn.style.margin = "2rem 1rem";
     bodyElem.appendChild(nextBtn);
