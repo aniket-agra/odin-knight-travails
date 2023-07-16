@@ -6,8 +6,8 @@ function populateDisplay() {
     chessBoard.style.gridTemplateRows = "repeat(8, 1fr)";
     chessBoard.style.gridTemplateColumns = "repeat(8, 1fr)";
     chessBoard.style.border = "2px solid black";
-    chessBoard.style.width = "20rem";
-    chessBoard.style.height = "20rem";
+    chessBoard.style.width = "40rem";
+    chessBoard.style.height = "40rem";
 
     for (let i = 1; i < 9; i++) {
         for (let j = 1; j < 9; j++) {
@@ -19,6 +19,9 @@ function populateDisplay() {
                 newDiv.style.backgroundColor = "black";
             newDiv.style.gridRow = `${i} / ${i+1}`;
             newDiv.style.gridColumn = `${j} / ${j+1}`;
+            newDiv.style.display = "flex";
+            newDiv.style.justifyContent = "center";
+            newDiv.style.alignItems = "center";
             chessBoard.appendChild(newDiv);
         }
     }
