@@ -2,7 +2,6 @@ import { createNode } from "../graphNode";
 import { populateDisplay } from "./display";
 import { knightMoves } from "./travails";
 
-knightMoves([0, 0], [1, 4]);
 populateDisplay();
 let start = undefined, end = undefined;
 document.querySelectorAll(".chessboard > div").forEach(e => e.addEventListener("click", function (e) {
