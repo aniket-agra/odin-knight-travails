@@ -2,6 +2,7 @@ import { createNode } from "../graphNode";
 import { populateDisplay } from "./display";
 import { knightMoves } from "./travails";
 import Knight from "../img/horse-svgrepo-com.svg";
+import "./style.css";
 
 populateDisplay();
 let start = undefined, end = undefined;
