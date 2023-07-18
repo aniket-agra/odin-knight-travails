@@ -6,14 +6,14 @@ import "./style.css";
 
 populateDisplay();
 let start = undefined, end = undefined;
+let knightImg = new Image();
+knightImg.src = Knight;
 document.querySelectorAll(".chessboard > div").forEach(e => e.addEventListener("click", function (e) {
     let clicked = e.target.classList[0];
     let i = clicked[0] - 1, j = clicked[1] - 1;
     if (start === undefined) {
         start = [i, j];
         e.target.style.color = "grey";
-        let knightImg = new Image();
-        knightImg.src = Knight;
         e.target.appendChild(knightImg);
     } else {
         end = [i, j];
