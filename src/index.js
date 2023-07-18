@@ -23,7 +23,7 @@ document.querySelectorAll(".chessboard > div").forEach(e => e.addEventListener("
 }));
 
 let startBtn = document.querySelector(".start");
-let nextBtn = document.querySelector(".next");
+let resetBtn = document.querySelector(".reset");
 
 let last;
 startBtn.addEventListener("click", function (e) {
@@ -45,6 +45,14 @@ startBtn.addEventListener("click", function (e) {
         }, 400 + 2000 * (i - 1));
     }
 });
+
+resetBtn.addEventListener("click", function (e) {
+    start = undefined; 
+    end = undefined;
+    let imgDiv = document.querySelector("img");
+    imgDiv.parentNode.removeChild(imgDiv);
+})
+
 // nextBtn.addEventListener("click", function (e) {
 //     if (last !== null) {
 //         let selector = `div[class = "${last.getValue()[0] + 1}${last.getValue()[1] + 1}"]`;
