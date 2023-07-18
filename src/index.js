@@ -17,7 +17,7 @@ document.querySelectorAll(".chessboard > div").forEach(e => e.addEventListener("
         e.target.appendChild(knightImg);
     } else {
         end = [i, j];
-        e.target.style.color = "grey";
+        e.target.style.color = "black";
         e.target.textContent = "X";
     }
 }));
