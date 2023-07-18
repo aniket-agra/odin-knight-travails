@@ -37,6 +37,7 @@ function populateDisplay() {
 
     let instructions = document.createElement("div");
     let title = document.createElement("div");
+    title.classList.add("title");
     instructions.appendChild(title);
     title.textContent = "Instructions";
     let list = document.createElement("ol");
