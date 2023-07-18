@@ -1,6 +1,7 @@
 import { createNode } from "../graphNode";
 import { populateDisplay } from "./display";
 import { knightMoves } from "./travails";
+import Knight from "../img/horse-svgrepo-com.svg";
 
 populateDisplay();
 let start = undefined, end = undefined;
@@ -10,7 +11,9 @@ document.querySelectorAll(".chessboard > div").forEach(e => e.addEventListener("
     if (start === undefined) {
         start = [i, j];
         e.target.style.color = "grey";
-        e.target.textContent = "K";
+        let knightImg = new Image();
+        knightImg.src = Knight;
+        e.target.appendChild(knightImg);
     } else {
         end = [i, j];
         e.target.style.color = "grey";
