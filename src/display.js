@@ -17,7 +17,7 @@ function populateDisplay() {
             if (Math.abs(i - j) % 2 === 0) 
                 newDiv.style.backgroundColor = "white";
             else
-                newDiv.style.backgroundColor = "black";
+                newDiv.style.backgroundColor = "lightgrey";
             newDiv.style.gridRow = `${i} / ${i+1}`;
             newDiv.style.gridColumn = `${j} / ${j+1}`;
             newDiv.style.display = "flex";

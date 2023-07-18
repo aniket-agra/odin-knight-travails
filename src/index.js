@@ -37,11 +37,11 @@ startBtn.addEventListener("click", function (e) {
     for (let i = 1; i < sequence.length; i++) {
         setTimeout(function() {
             let selector = `div[class = "${sequence[i - 1][0] + 1}${sequence[i - 1][1] + 1}"]`;
-            document.querySelector(selector).textContent = "";
+            document.querySelector(selector).removeChild(document.querySelector(`${selector} > img`));
             selector = `div[class = "${sequence[i][0] + 1}${sequence[i][1] + 1}"]`;
             let nextDiv = document.querySelector(selector);        
-            nextDiv.textContent = "K";
-            nextDiv.style.color = "grey";
+            nextDiv.textContent = "";
+            nextDiv.appendChild(knightImg);
         }, 400 + 2000 * (i - 1));
     }
 });
