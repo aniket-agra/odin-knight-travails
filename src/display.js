@@ -42,10 +42,11 @@ function populateDisplay() {
     bodyElem.appendChild(resetBtn);
 
     let instructions = document.createElement("div");
+    instructions.classList.add("instructions");
     let title = document.createElement("div");
     title.classList.add("title");
-    instructions.appendChild(title);
     title.textContent = "Instructions";
+    instructions.appendChild(title);
     let list = document.createElement("ol");
     for (let i = 0; i < 3; i++) {
         let item = document.createElement("li");
