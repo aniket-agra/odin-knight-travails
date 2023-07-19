@@ -24,6 +24,11 @@ body {
     font-size: 2rem;
 }
 
+.title {
+    display: flex;
+    justify-content: center;
+}
+
 .buttons {
     grid-row: 2 / 3;
     grid-column: 2 / 3;
