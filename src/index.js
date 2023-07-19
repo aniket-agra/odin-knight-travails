@@ -15,7 +15,7 @@ document.querySelectorAll(".chessboard > div").forEach(e => e.addEventListener("
         start = [i, j];
         e.target.style.color = "grey";
         e.target.appendChild(knightImg);
-    } else {
+    } else if (end === undefined){
         end = [i, j];
         e.target.style.color = "black";
         e.target.textContent = "X";
