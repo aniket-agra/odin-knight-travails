@@ -23,17 +23,20 @@ function populateDisplay() {
     
     bodyElem.appendChild(chessBoard);
 
+    let btnDiv = document.createElement("div");
+    btnDiv.classList.add("buttons");
+
     let startBtn = document.createElement("button");
     startBtn.classList.add("start");
     startBtn.textContent = "Start";
     startBtn.style.margin = "2rem 0rem 0 19rem";
-    bodyElem.appendChild(startBtn);
+    btnDiv.appendChild(startBtn);
 
     let resetBtn = document.createElement("button");
     resetBtn.classList.add("reset");
     resetBtn.textContent = "Reset";
     resetBtn.style.margin = "2rem 2rem";
-    bodyElem.appendChild(resetBtn);
+    btnDiv.appendChild(resetBtn);
 
     let instructions = document.createElement("div");
     instructions.classList.add("instructions");
@@ -54,6 +57,7 @@ function populateDisplay() {
     instructions.appendChild(list);
     bodyElem.appendChild(instructions);
 
+    bodyElem.appendChild(btnDiv);
     // let nextBtn = document.createElement("button");
     // nextBtn.classList.add("next");
     // nextBtn.textContent = "Next";
