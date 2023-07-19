@@ -21,6 +21,7 @@ body {
 .instructions {
     grid-row: 1 / 2;
     grid-column: 2 / 3;
+    font-size: 2rem;
 }
 
 .buttons {
@@ -29,5 +30,13 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 20px;
+}
+
+.start {
+    font-size: 2rem;
+}
+
+.reset {
+    font-size: 2rem;
 }
 
