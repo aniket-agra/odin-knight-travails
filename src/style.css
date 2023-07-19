@@ -6,7 +6,6 @@ img {
 body {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 9fr 1fr;
 }
 
 .chessboard {
@@ -17,3 +16,19 @@ body {
     grid-template-columns: repeat(8, 1fr);
     border: 2px solid black;
 }
+
+.instructions {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
+
+.start {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+
+.reset {
+    grid-row : 2 / 3;
+    grid-column: 2 / 3;
+}
+
