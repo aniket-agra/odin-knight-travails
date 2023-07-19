@@ -29,13 +29,11 @@ function populateDisplay() {
     let startBtn = document.createElement("button");
     startBtn.classList.add("start");
     startBtn.textContent = "Start";
-    startBtn.style.margin = "2rem 0rem 0 19rem";
     btnDiv.appendChild(startBtn);
 
     let resetBtn = document.createElement("button");
     resetBtn.classList.add("reset");
     resetBtn.textContent = "Reset";
-    resetBtn.style.margin = "2rem 2rem";
     btnDiv.appendChild(resetBtn);
 
     let instructions = document.createElement("div");
