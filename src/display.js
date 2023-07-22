@@ -68,12 +68,15 @@ function populateDisplay() {
     title.textContent = "Instructions";
     instructions.appendChild(title);
     let list = document.createElement("ol");
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 5; i++) {
         let item = document.createElement("li");
         switch (i) {
             case 0 : item.textContent = "To start, click on a square for initial position."; break;
             case 1 : item.textContent = "Next, click on another square for final position."; break;
             case 2 : item.textContent = "Finally, click start button to start the animation and sit back."; break;
+            case 3 : item.textContent = "Start button remains disabled " +
+                                        "until start and end positions are selected."; break;
+            case 4 : item.textContent = "Click reset button to select starting and ending positions again."; break; 
         } 
         list.appendChild(item);
     }
