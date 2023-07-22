@@ -12,7 +12,7 @@ function populateDisplay() {
         linkElem = document.createElement("link");
         linkElem.setAttribute("rel", "stylesheet");
         linkElem.setAttribute("href", 
-        "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+        "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap");
         headElem.appendChild(linkElem);
     }
 
