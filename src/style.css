@@ -21,6 +21,11 @@ body {
     border: 2px solid black;
 }
 
+.chessboard > div {
+    font-size : 2rem;
+    font-weight: bold;
+}
+
 .instructions {
     grid-row: 3 / 4;
     font-size: 2rem;
