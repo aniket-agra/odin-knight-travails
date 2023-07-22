@@ -27,11 +27,30 @@ body {
     width : 80vmin;
     height : 80vmin;
     border: 2px solid black;
+    --divRadius : 16px;
+    border-radius: var(--divRadius);
 }
 
 .chessboard > div {
     font-size : 2rem;
     font-weight: bold;
+}
+
+div[class = "11"] {
+    border-top-left-radius: var(--divRadius);
+}
+
+div[class = "18"] {
+    border-top-right-radius: var(--divRadius);
+}
+
+div[class = "81"] {
+    border-bottom-left-radius: var(--divRadius);
+}
+
+div[class = "88"] {
+    border-bottom-right-radius: var(--divRadius);
+
 }
 
 .instructions {
