@@ -9,6 +9,8 @@ body {
     font-family: "Roboto", sans-serif;
     justify-items: center;
     align-items: center;
+    background-image: url("../img/chess-board.jpeg");
+    color: white;
 }
 
 .bodyTitle {
