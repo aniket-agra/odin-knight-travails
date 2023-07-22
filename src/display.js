@@ -1,7 +1,7 @@
 function populateDisplay() {
     {
         let headElem = document.querySelector("head");
-        let srcElem = document.querySelector("head > src");
+        let srcElem = document.querySelector("head > script");
         let linkElem = document.createElement("link");
         linkElem.setAttribute("rel", "preconnect");
         linkElem.setAttribute("href", "https://fonts.googleapis.com");
