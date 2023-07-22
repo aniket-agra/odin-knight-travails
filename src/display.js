@@ -1,19 +1,21 @@
 function populateDisplay() {
     {
         let headElem = document.querySelector("head");
+        let srcElem = document.querySelector("head > src");
         let linkElem = document.createElement("link");
         linkElem.setAttribute("rel", "preconnect");
         linkElem.setAttribute("href", "https://fonts.googleapis.com");
-        headElem.appendChild(linkElem);
+        headElem.insertBefore(linkElem, srcElem);
         linkElem = document.createElement("link");
+        linkElem.setAttribute("rel", "preconnect");
         linkElem.setAttribute("href", "https://fonts.gstatic.com");
         linkElem.setAttribute("crossorigin", "");
-        headElem.appendChild(linkElem);
+        headElem.insertBefore(linkElem, srcElem);
         linkElem = document.createElement("link");
         linkElem.setAttribute("rel", "stylesheet");
         linkElem.setAttribute("href", 
-        "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap");
-        headElem.appendChild(linkElem);
+        "https://fonts.googleapis.com/css2?family=Lumanosimo&family=Roboto:wght@300;400;700;900&display=swap");
+        headElem.insertBefore(linkElem, srcElem);
     }
 
     let bodyElem = document.querySelector("body");
