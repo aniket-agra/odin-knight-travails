@@ -1,4 +1,21 @@
 function populateDisplay() {
+    {
+        let headElem = document.querySelector("head");
+        let linkElem = document.createElement("link");
+        linkElem.setAttribute("rel", "preconnect");
+        linkElem.setAttribute("href", "https://fonts.googleapis.com");
+        headElem.appendChild(linkElem);
+        linkElem = document.createElement("link");
+        linkElem.setAttribute("href", "https://fonts.gstatic.com");
+        linkElem.setAttribute("crossorigin", "");
+        headElem.appendChild(linkElem);
+        linkElem = document.createElement("link");
+        linkElem.setAttribute("rel", "stylesheet");
+        linkElem.setAttribute("href", 
+        "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+        headElem.appendChild(linkElem);
+    }
+
     let bodyElem = document.querySelector("body");
 
     let chessBoard = document.createElement("div");
