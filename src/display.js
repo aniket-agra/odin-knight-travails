@@ -53,6 +53,7 @@ function populateDisplay() {
     let startBtn = document.createElement("button");
     startBtn.classList.add("start");
     startBtn.textContent = "Start";
+    startBtn.setAttribute("disabled", "");
     btnDiv.appendChild(startBtn);
 
     let resetBtn = document.createElement("button");

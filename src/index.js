@@ -8,6 +8,8 @@ populateDisplay();
 let start = undefined, end = undefined;
 let knightImg = new Image();
 knightImg.src = Knight;
+let startBtn = document.querySelector(".start");
+let resetBtn = document.querySelector(".reset");
 document.querySelectorAll(".chessboard > div").forEach(e => e.addEventListener("click", function (e) {
     let clicked = e.target.classList[0];
     let i = clicked[0] - 1, j = clicked[1] - 1;
@@ -19,11 +21,9 @@ document.querySelectorAll(".chessboard > div").forEach(e => e.addEventListener("
         end = [i, j];
         e.target.style.color = "black";
         e.target.textContent = "X";
+        startBtn.removeAttribute("disabled");
     }
 }));
-
-let startBtn = document.querySelector(".start");
-let resetBtn = document.querySelector(".reset");
 
 let last;
 startBtn.addEventListener("click", function (e) {
@@ -44,6 +44,8 @@ startBtn.addEventListener("click", function (e) {
             nextDiv.appendChild(knightImg);
         }, 400 + 2000 * (i - 1));
     }
+
+    startBtn.setAttribute("disabled", "");
 });
 
 resetBtn.addEventListener("click", function (e) {
@@ -51,6 +53,7 @@ resetBtn.addEventListener("click", function (e) {
     end = undefined;
     let imgDiv = document.querySelector("img");
     imgDiv.parentNode.removeChild(imgDiv);
+    startBtn.setAttribute("disabled", "");
 })
 
 // nextBtn.addEventListener("click", function (e) {

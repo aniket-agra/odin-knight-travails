@@ -87,3 +87,9 @@ button {
 button:hover {
     box-shadow: 2px 2px 2px 1px rgba(255, 255, 255, 0.5);
 }
+
+button:disabled, button:active {
+    box-shadow: inset 2px 2px 2px 1px rgba(255, 255, 255, 0.5),
+                inset -2px -2px 2px 1px rgba(255, 255, 255, 0.5);
+
+}
