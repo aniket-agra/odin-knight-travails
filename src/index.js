@@ -20,7 +20,10 @@ document.querySelectorAll(".chessboard > div").forEach(e => e.addEventListener("
     } else if (end === undefined){
         end = [i, j];
         e.target.style.color = "black";
-        e.target.textContent = "X";
+        let endDiv = document.createElement("div");
+        endDiv.classList.add("end");
+        endDiv.textContent = "X";
+        e.target.appendChild(endDiv);
         startBtn.removeAttribute("disabled");
     }
 }));

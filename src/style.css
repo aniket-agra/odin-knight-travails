@@ -32,9 +32,12 @@ body {
 }
 
 .chessboard > div {
+    opacity: 0.8;
+}
+
+.end {
     font-size : 1.5rem;
     font-weight: bold;
-    opacity: 0.8;
 }
 
 div[class = "11"] {
