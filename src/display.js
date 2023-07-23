@@ -22,7 +22,7 @@ function populateDisplay() {
 
     let titleElem = document.createElement("div");
     titleElem.classList.add("bodyTitle");
-    titleElem.textContent = "Shortest Path of Knight from Start to End";
+    titleElem.textContent = "Knight's Trot from Start to End";
     bodyElem.appendChild(titleElem);
 
     let chessBoard = document.createElement("div");
