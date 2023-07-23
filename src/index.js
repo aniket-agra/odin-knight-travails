@@ -57,6 +57,8 @@ resetBtn.addEventListener("click", function (e) {
     let imgDiv = document.querySelector("img");
     imgDiv.parentNode.removeChild(imgDiv);
     startBtn.setAttribute("disabled", "");
+    let endDiv = document.querySelector(".end");
+    endDiv.parentNode.removeChild(endDiv);
 })
 
 // nextBtn.addEventListener("click", function (e) {
